@@ -63,5 +63,5 @@ RUN chmod a+x /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
 WORKDIR /
-EXPOSE 8888
+EXPOSE 80
 CMD ["/bin/bash"]
