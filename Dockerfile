@@ -13,7 +13,7 @@ RUN apt-get update
 
 # 安装依赖
 
-RUN apt-get install make gcc libpcre3-dev zlib1g-dev --assume-yes
+RUN apt-get install vim make gcc libpcre3-dev zlib1g-dev --assume-yes
 
 # 复制工具包
 ADD ./lib/fastdfs-6.06.tar.gz /usr/local/src
