@@ -26,9 +26,9 @@ WORKDIR /usr/local/fast/libfastcommon-1.0.43
 RUN ./make.sh && ./make.sh install
 
 RUN ln -s /usr/lib64/libfastcommon.so /usr/local/lib/libfastcommon.so \
-ln -s /usr/lib64/libfastcommon.so /usr/lib/libfastcommon.so \
-ln -s /usr/lib64/libfdfsclient.so /usr/local/lib/libfdfsclient.so \
-ln -s /usr/lib64/libfdfsclient.so /usr/lib/libfdfsclient.so
+# ln -s /usr/lib64/libfastcommon.so /usr/lib/libfastcommon.so \
+ln -s /usr/lib64/libfdfsclient.so /usr/local/lib/libfdfsclient.so
+# ln -s /usr/lib64/libfdfsclient.so /usr/lib/libfdfsclient.so
 
 # 安装 FastDFS
 WORKDIR /usr/local/fast/fastdfs-6.06
