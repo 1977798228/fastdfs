@@ -48,7 +48,7 @@ RUN mkdir -p /fastdfs/storage
 ADD ./conf/client.conf /etc/fdfs
 
 # 安装nginx
-WORKDIR /usr/local/src/nginx-1.18.0
+WORKDIR /usr/local/fast/nginx-1.18.0
 
 # 配置fastdfs-nginx-module模块
 ADD ./conf/config /usr/local/fast/fastdfs-nginx-module-1.22/src
@@ -56,7 +56,7 @@ ADD ./conf/config /usr/local/fast/fastdfs-nginx-module-1.22/src
 # FastDFS 与 Nginx 集成
 RUN ./configure --add-module=/usr/local/fast/fastdfs-nginx-module-1.22/src
 RUN make && make install
-WORKDIR /usr/local/src/fastdfs-6.06/conf
+WORKDIR /usr/local/fast/fastdfs-6.06/conf
 ADD ./conf/mod_fastdfs.conf /etc/fdfs
 RUN cp http.conf mime.types /etc/fdfs/
 
