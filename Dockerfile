@@ -25,9 +25,9 @@ ADD ./lib/nginx-1.18.0.tar.gz /usr/local/fast
 WORKDIR /usr/local/fast/libfastcommon-1.0.43
 RUN ./make.sh && ./make.sh install
 
-RUN ln -s /usr/lib64/libfastcommon.so /usr/local/lib/libfastcommon.so \
+# RUN ln -s /usr/lib64/libfastcommon.so /usr/local/lib/libfastcommon.so \
 # ln -s /usr/lib64/libfastcommon.so /usr/lib/libfastcommon.so \
-ln -s /usr/lib64/libfdfsclient.so /usr/local/lib/libfdfsclient.so
+# ln -s /usr/lib64/libfdfsclient.so /usr/local/lib/libfdfsclient.so
 # ln -s /usr/lib64/libfdfsclient.so /usr/lib/libfdfsclient.so
 
 # 安装 FastDFS
