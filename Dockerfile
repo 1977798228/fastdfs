@@ -34,7 +34,7 @@ RUN ./make.sh && ./make.sh install
 WORKDIR /usr/local/fast/fastdfs-6.06
 RUN ./make.sh && ./make.sh install
 
-COPY ./conf/fdfs_storaged /etc/init.d/fdfs_storaged
+# COPY ./conf/fdfs_storaged /etc/init.d/fdfs_storaged
 
 # 配置 FastDFS tracker
 ADD ./conf/tracker.conf /etc/fdfs
